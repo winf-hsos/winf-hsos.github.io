@@ -6,4 +6,4 @@
 
 ## Übungen
 - [Databricks Notebook - Beispiele auf dem 2. Termin](databricks-notebooks/termin-2.html)
-
+- [Databricks Notebook - Beispiele auf dem 3. Termin](databricks-notebooks/termin-3.html)

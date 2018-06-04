@@ -1,0 +1,143 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Google Maps Example</title>
+
+    <style type="text/css">
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+        #map {
+            height: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" style="margin-top: 32px;">
+            <div class="col">
+                <!-- This is where the map will show up -->
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIwQQ8uhzd3vMVOAkB19Vo6t9l8mSBJPk&callback=initMap" async defer></script>
+
+    <script>
+        /* global google navigator */
+
+        var map;
+
+        /* This function is called when the 
+         * Google Map API has finished loading */
+        function initMap() {
+            getPosition(updateMap);
+        }
+
+        /* This function retrieves the position from the device
+         * and calls the given callback function on success */
+        function getPosition(callback) {
+
+            if ("geolocation" in navigator) {
+                /* geolocation is available */
+                console.log("Geolocation is available");
+
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    callback(position.coords.latitude, position.coords.longitude);
+                });
+            }
+            else {
+                /* geolocation IS NOT available */
+                console.log("Geolocation is not available");
+                callback(-1, -1);
+            }
+        }
+
+        /* This function sets the center of the map 
+         * to the given coordinates and adds markers with 
+         * simple info boxes */
+        function updateMap(latitude, longitude) {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: latitude, lng: longitude },
+                zoom: 14
+            });
+
+            /* Create a simple marker showing the current location */
+            var marker = new google.maps.Marker({
+                position: { lat: latitude, lng: longitude },
+                map: map,
+                title: 'My Position'
+            });
+
+            /* Create a info message that show up above the marker */
+            var contentString = "<h4>Your current location</h4>" +
+                "<p>Based on your device's info, the marker shows where <b>you</b> are currently.</p>";
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            /* Listen to clicks on the marker and open info message */
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+            });
+
+            addMarkerAtAddress("Am Tannkamp 75c, 49088 Osnabrück")
+        }
+
+        /* Add a marker at a given address as text */
+        function addMarkerAtAddress(addressText) {
+            var geocoder = new google.maps.Geocoder();
+
+            geocoder.geocode({
+                'address': addressText
+            }, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
+
+                        console.log(results[0].geometry.location);
+
+                        /* Uncomment this line if you want to center the map around the address */
+                        //map.setCenter(results[0].geometry.location);
+
+                        var infowindow = new google.maps.InfoWindow({
+                            content: '<b>' + addressText + '</b>',
+                            size: new google.maps.Size(150, 50)
+                        });
+
+                        var marker = new google.maps.Marker({
+                            position: results[0].geometry.location,
+                            map: map,
+                            title: addressText
+                        });
+
+                        google.maps.event.addListener(marker, 'click', function() {
+                            infowindow.open(map, marker);
+                        });
+                    }
+                    else {
+                        console.error("No results found");
+                    }
+                }
+                else {
+                    console.error("Geocode was not successful for the following reason: " + status);
+                }
+            });
+        }
+    </script>
+
+</body>

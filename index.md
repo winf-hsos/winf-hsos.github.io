@@ -1,6 +1,5 @@
 # Web Engingeering Examples
 
-- [Login Form Example](web-examples/hsos-login-form/index.html)
 - [Google Maps Example I](web-examples/index.html)
 
 # Databricks Notebooks:

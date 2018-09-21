@@ -2,10 +2,10 @@
 
 ## Notebook Templates
 
-- [Databricks Notebook - Template Simpsons](databricks-notebooks/information-management/Template - Crimes in Chicago 2018.html)
-- [Databricks Notebook - Template Simpsons](databricks-notebooks/information-management/Template - Wine.html)
-- [Databricks Notebook - Template Simpsons](databricks-notebooks/information-management/Template - Craft Beer.html)
-- [Databricks Notebook - Template Simpsons](databricks-notebooks/information-management/Template - Simpsons.html)
+- [Databricks Notebook - Template - Crimes in Chicago 2018](databricks-notebooks/information-management/Template - Crimes in Chicago 2018.html)
+- [Databricks Notebook - Template - Wine](databricks-notebooks/information-management/Template - Wine.html)
+- [Databricks Notebook - Template - Craft Beer](databricks-notebooks/information-management/Template - Craft Beer.html)
+- [Databricks Notebook - Template - Simpsons](databricks-notebooks/information-management/Template - Simpsons.html)
 
 # Web Engingeering Examples
 

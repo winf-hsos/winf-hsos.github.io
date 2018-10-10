@@ -6,6 +6,7 @@
 - [Databricks Notebook - Template - Wine Reviews](databricks-notebooks/information-management/Template - Wine Reviews.html)
 - [Databricks Notebook - Template - Craft Beer](databricks-notebooks/information-management/Template - Craft Beer.html)
 - [Databricks Notebook - Template - Simpsons](databricks-notebooks/information-management/Template - Simpsons.html)
+- [Example Notebook - SQL Joins](databricks-notebooks/information-management/Example Notebook - SQL Joins.html) 
 
 # Web Engingeering Examples
 

@@ -8,6 +8,10 @@
 - [Databricks Notebook - Template - Simpsons](databricks-notebooks/information-management/Template - Simpsons.html)
 - [Example Notebook - SQL Joins](databricks-notebooks/information-management/Example Notebook - SQL Joins.html) 
 
+## Case Study Templates
+
+- [Template Case A: Crimes in Chicago](databricks-notebooks/information-management/Template Case A Crimes in Chicago.html)
+
 # Web Engingeering Examples
 
 - [Google Maps Example I](web-examples/index.html)

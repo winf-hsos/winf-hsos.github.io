@@ -7,7 +7,10 @@
 - [Databricks Notebook - Template - Craft Beer](databricks-notebooks/information-management/Template - Craft Beer.html)
 - [Databricks Notebook - Template - Simpsons](databricks-notebooks/information-management/Template - Simpsons.html)
 - [Databricks Notebook - Orangenlimonade](databricks-notebooks/information-management/Orangenlimonade.html)
+
+## Illustrative Notebooks
 - [Example Notebook - SQL Joins](databricks-notebooks/information-management/Example Notebook - SQL Joins.html) 
+- [Subqueries and Window Functions](databricks-notebooks/information-management/Subqueries and Window Functions.html) 
 
 ## Case Study Templates
 

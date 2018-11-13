@@ -1,3 +1,10 @@
+# Empirisches Arbeiten
+- [1 - Einführung SQL](databricks-notebooks/empirisches-arbeiten/1 - Einführung SQL.html)
+- [2 - Machine Learning - Beispiele](databricks-notebooks/empirisches-arbeiten/2 - Machine Learning - Beispiele.html)
+
+## Notebook Templates
+
+
 # Information Management
 
 ## Notebook Templates
@@ -6,7 +13,6 @@
 - [Databricks Notebook - Template - Wine Reviews](databricks-notebooks/information-management/Template - Wine Reviews.html)
 - [Databricks Notebook - Template - Craft Beer](databricks-notebooks/information-management/Template - Craft Beer.html)
 - [Databricks Notebook - Template - Simpsons](databricks-notebooks/information-management/Template - Simpsons.html)
-- [Databricks Notebook - Orangenlimonade](databricks-notebooks/information-management/Orangenlimonade.html)
 
 ## Illustrative Notebooks
 - [Example Notebook - SQL Joins](databricks-notebooks/information-management/Example Notebook - SQL Joins.html) 

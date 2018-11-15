@@ -1,8 +1,9 @@
 # Empirisches Arbeiten
-- [1 - Einführung SQL](databricks-notebooks/empirisches-arbeiten/1 - Einführung SQL.html)
-- [2 - Machine Learning - Beispiele](databricks-notebooks/empirisches-arbeiten/2 - Machine Learning - Beispiele.html)
 
 ## Notebook Templates
+
+- [1 - Einführung SQL](databricks-notebooks/empirisches-arbeiten/1 - Einführung SQL.html)
+- [2 - Machine Learning - Beispiele](databricks-notebooks/empirisches-arbeiten/2 - Machine Learning - Beispiele.html)
 
 
 # Information Management
@@ -21,6 +22,7 @@
 ## Case Study Templates
 
 - [Template Case A: Crimes in Chicago](databricks-notebooks/information-management/Template Case A Crimes in Chicago.html)
+- [Template Case B: Crimes in LA](databricks-notebooks/information-management/Template - Crimes in LA.html)
 
 # Web Engingeering Examples
 

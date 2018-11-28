@@ -4,7 +4,7 @@
 
 - [1 - Einführung SQL](databricks-notebooks/empirisches-arbeiten/1 - Einführung SQL.html)
 - [2 - Machine Learning - Beispiele](databricks-notebooks/empirisches-arbeiten/2 - Machine Learning - Beispiele.html)
-
+- [3 - Text Analytics](databricks-notebooks/empirisches-arbeiten/3 - Text Analytics.html)
 
 # Information Management
 

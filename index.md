@@ -1,6 +1,6 @@
 # SQL Tutorial
 
-- [#1 - Der SELECT-Befehl](databricks-notebooks/sql-tutorial/#1 Der SELECT Befehl.html)
+- [#1 - Der SELECT-Befehl](databricks-notebooks/sql-tutorial/1_Der_SELECT_Befehl.html)
 
 # Empirisches Arbeiten
 

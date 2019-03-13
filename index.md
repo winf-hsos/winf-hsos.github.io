@@ -4,7 +4,8 @@
 - [Amazon Reviews Template (Source)](databricks-notebooks/big-data-analytics/Amazon Reviews Template.scala)
 - [Twitter Data Template (HTML)](databricks-notebooks/big-data-analytics/Twitter Data Template.html)
 - [Twitter Data Template (Source)](databricks-notebooks/big-data-analytics/Twitter Data Template.scala)
-
+- [Mars Twitter Data Template (HTML)](databricks-notebooks/big-data-analytics/Mars Twitter Data Template.html)
+- [Mars Twitter Data Template (Source)](databricks-notebooks/big-data-analytics/Mars Twitter Data Template.scala)
 
 # SQL Tutorial
 

@@ -25,6 +25,8 @@ import scala.sys.process._
 import org.apache.spark.sql.types.{TimestampType}
 import org.apache.spark.sql.functions._
 
+spark.conf.set("spark.sql.session.timeZone", "GMT+1")
+
 val tables = Array("twitter_followers", "twitter_timelines")
 
 val file_ending = ".json.gz"
@@ -49,10 +51,14 @@ for(t <- tables) {
                         .option("quote", "\"")
                         .option("escape", "\"")
                         .json("/datasets/" +  tableName + file_ending)
-  
-   // Convert int to timestamp
+   
   if(tableName == "twitter_followers") {  
       df = df.withColumn("created_at", unix_timestamp($"created_at", "E MMM dd HH:mm:ss Z yyyy").cast(TimestampType))
+      df = df.withColumn("retrieved_time", $"retrieved_time".cast(TimestampType))
+  }
+  if(tableName == "twitter_timelines") {
+    df = df.withColumn("created_at", unix_timestamp($"created_at", "E MMM dd HH:mm:ss Z yyyy").cast(TimestampType))
+    df = df.withColumn("retrieved_time", ($"retrieved_time" / 1000).cast(TimestampType))    
   }
       
   df.unpersist()
@@ -73,3 +79,27 @@ for(t <- tables) {
 // MAGIC select count(1) as `Num Records`, 'followers' as `Table` from twitter_followers
 // MAGIC union
 // MAGIC select count(1) as `Num Records`, 'tweets' as `Table` from twitter_timelines
+
+// COMMAND ----------
+
+// MAGIC %md
+// MAGIC Die Abfrage unten gibt euch die Anzahl Tweets pro User zurück.
+
+// COMMAND ----------
+
+// MAGIC %sql
+// MAGIC select user, count(1) as `Number Tweets`
+// MAGIC from twitter_timelines
+// MAGIC group by user
+
+// COMMAND ----------
+
+// MAGIC %md
+// MAGIC Die Abfrage unten liefert die Follower für jeden User.
+
+// COMMAND ----------
+
+// MAGIC %sql
+// MAGIC select follower_of, count(1) as `Number Followers`
+// MAGIC from twitter_followers
+// MAGIC group by follower_of

@@ -103,3 +103,10 @@ for(t <- tables) {
 // MAGIC select follower_of, count(1) as `Number Followers`
 // MAGIC from twitter_followers
 // MAGIC group by follower_of
+
+// COMMAND ----------
+
+// MAGIC %md
+// MAGIC # Jetzt seid ihr an der Reihe ...
+// MAGIC ---
+// MAGIC Ihr könnt nun direkt unter diesem Block loslegen und die Tabellen und darin enthaltenen Daten abfragen. Viel Erfolg!

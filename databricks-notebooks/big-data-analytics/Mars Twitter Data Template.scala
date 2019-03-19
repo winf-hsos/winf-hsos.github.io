@@ -76,3 +76,10 @@ for(t <- tables) {
 // MAGIC select count(1) as `Num Records`, 'organic_uk' as `Table` from organic_uk
 // MAGIC union
 // MAGIC select count(1) as `Num Records`, 'feel_about_cats_dogs' as `Table` from feel_about_cats_dogs
+
+// COMMAND ----------
+
+// MAGIC %md
+// MAGIC # Jetzt seid ihr an der Reihe ...
+// MAGIC ---
+// MAGIC Ihr könnt nun direkt unter diesem Block loslegen und die Tabellen und darin enthaltenen Daten abfragen. Viel Erfolg!

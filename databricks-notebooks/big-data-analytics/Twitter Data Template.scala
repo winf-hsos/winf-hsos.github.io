@@ -54,7 +54,7 @@ for(t <- tables) {
    
   if(tableName == "twitter_followers") {  
       df = df.withColumn("created_at", unix_timestamp($"created_at", "E MMM dd HH:mm:ss Z yyyy").cast(TimestampType))
-      df = df.withColumn("retrieved_time", $"retrieved_time".cast(TimestampType))
+      df = df.withColumn("retrieved_time", ($"retrieved_time" / 1000).cast(TimestampType))
   }
   if(tableName == "twitter_timelines") {
     df = df.withColumn("created_at", unix_timestamp($"created_at", "E MMM dd HH:mm:ss Z yyyy").cast(TimestampType))

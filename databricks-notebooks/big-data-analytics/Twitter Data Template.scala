@@ -29,28 +29,33 @@ spark.conf.set("spark.sql.session.timeZone", "GMT+1")
 
 val tables = Array("twitter_followers", "twitter_timelines")
 
-val file_ending = ".json.gz"
+val file_ending = ".json"
 val group_code = dbutils.widgets.get("group_code")
+
 
 for(t <- tables) {
 
   val tableName = t
-  dbutils.fs.rm("file:/tmp/" + tableName + file_ending)
+  var localFileName = "parsed%2F" + group_code + "%2F" + tableName + file_ending + "?alt=media"
+  val localpath = "file:/tmp/" + localFileName
+  dbutils.fs.rm("file:/tmp/" + localFileName)
 
-  "wget -P /tmp https://s3.amazonaws.com/nicolas.meseth/data+sets/ss2019/big_data_analytics/" + group_code + "/" + tableName + file_ending !!
+  var url = "https://firebasestorage.googleapis.com/v0/b/big-data-analytics-helper.appspot.com/o/parsed%2F" + group_code + "%2F" + tableName + file_ending + "?alt=media"  
 
-  val localpath = "file:/tmp/" + tableName + file_ending
+  "wget -P /tmp " + url !!
+  
   dbutils.fs.rm("dbfs:/datasets/" + tableName + file_ending)
   dbutils.fs.mkdirs("dbfs:/datasets/")
   dbutils.fs.cp(localpath, "dbfs:/datasets/")
-  display(dbutils.fs.ls("dbfs:/datasets/" +  tableName + file_ending))
+    
+  display(dbutils.fs.ls("dbfs:/datasets/" +  localFileName))  
 
   sqlContext.sql("drop table if exists " + tableName)
   var df = spark.read.option("header", "true") 
                         .option("inferSchema", "true")
                         .option("quote", "\"")
                         .option("escape", "\"")
-                        .json("/datasets/" +  tableName + file_ending)
+                        .json("/datasets/" + localFileName)
    
   if(tableName == "twitter_followers") {  
       df = df.withColumn("created_at", unix_timestamp($"created_at", "E MMM dd HH:mm:ss Z yyyy").cast(TimestampType))
@@ -64,6 +69,7 @@ for(t <- tables) {
   df.unpersist()
   df.cache()
   df.write.saveAsTable(tableName);  
+ 
 }
 
 // COMMAND ----------

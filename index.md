@@ -7,6 +7,14 @@
 - [Mars Twitter Data Template (HTML)](databricks-notebooks/big-data-analytics/Mars Twitter Data Template.html)
 - [Mars Twitter Data Template (Source)](databricks-notebooks/big-data-analytics/Mars Twitter Data Template.scala)
 
+- [Arrays mit SQL abfragen (HTML)](databricks-notebooks/big-data-analytics/Arrays mit SQL abfragen.html)
+- [Arrays mit SQL abfragen (Source)](databricks-notebooks/big-data-analytics/Arrays mit SQL abfragen.scala)
+
+
+- [Texte für SQL Analyse vorbereiten (HTML)](databricks-notebooks/big-data-analytics/Texte für SQL Analysen vorbereiten.html)
+- [Texte für SQL Analyse vorbereiten (Source)](databricks-notebooks/big-data-analytics/Texte für SQL Analysen vorbereiten.scala)
+
+
 # SQL Tutorial
 
 - [#1 - Der SELECT-Befehl](databricks-notebooks/sql-tutorial/1_Der_SELECT_Befehl.html)

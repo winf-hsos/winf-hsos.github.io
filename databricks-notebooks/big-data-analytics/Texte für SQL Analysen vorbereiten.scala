@@ -89,7 +89,8 @@ for(t <- tables) {
 // MAGIC %sql
 // MAGIC -- View enthält im Ergebnis nur Tweets mit dem Hashtag #organic
 // MAGIC create or replace view tweets_prep_step_1 as
-// MAGIC select user
+// MAGIC select id
+// MAGIC       ,user
 // MAGIC       ,text
 // MAGIC       ,created_at
 // MAGIC from twitter_timelines
@@ -115,7 +116,9 @@ for(t <- tables) {
 
 // MAGIC %sql
 // MAGIC create or replace view tweets_prep_step_2 as
-// MAGIC select user
+// MAGIC select id 
+// MAGIC       ,user
+// MAGIC       ,text as original_text
 // MAGIC       ,created_at
 // MAGIC       -- Remove two or more subsequent white spaces
 // MAGIC       ,regexp_replace(
@@ -163,7 +166,9 @@ for(t <- tables) {
 
 // MAGIC %sql
 // MAGIC create or replace view tweets_prep_step_2 as
-// MAGIC select user
+// MAGIC select id
+// MAGIC       ,user
+// MAGIC       ,text as original_text
 // MAGIC       ,created_at
 // MAGIC       -- Remove two or more subsequent white spaces
 // MAGIC       ,regexp_replace(
@@ -200,10 +205,16 @@ for(t <- tables) {
 
 // MAGIC %sql
 // MAGIC create or replace view tweets_prep_step_3 as
-// MAGIC   select user
+// MAGIC   select id
+// MAGIC         ,user
 // MAGIC         ,created_at
 // MAGIC         ,split(text, " ") as `words`
 // MAGIC   from tweets_prep_step_2
+
+// COMMAND ----------
+
+// MAGIC %sql
+// MAGIC select * from tweets_prep_step_3
 
 // COMMAND ----------
 
@@ -219,7 +230,9 @@ for(t <- tables) {
 
 // MAGIC %sql
 // MAGIC create or replace view tweets_prep_step_3 as
-// MAGIC   select user
+// MAGIC   select id
+// MAGIC         ,user
+// MAGIC         ,original_text
 // MAGIC         ,created_at
 // MAGIC         ,explode(split(text, " ")) as `word`
 // MAGIC   from tweets_prep_step_2
@@ -228,6 +241,15 @@ for(t <- tables) {
 
 // MAGIC %sql
 // MAGIC select * from tweets_prep_step_3
+
+// COMMAND ----------
+
+// MAGIC %sql
+// MAGIC select word, count(1)
+// MAGIC from tweets_prep_step_3
+// MAGIC where length(word) > 1
+// MAGIC group by word
+// MAGIC order by count(1) desc
 
 // COMMAND ----------
 
@@ -248,7 +270,7 @@ for(t <- tables) {
 // MAGIC select word, count(1) as `Anzahl`
 // MAGIC from tweets_prep_step_3
 // MAGIC -- Nicht sehr effizient
-// MAGIC where word not in ('to', 'the', 'rt', 'a')
+// MAGIC where word not in (select word from stopwords)
 // MAGIC group by word
 // MAGIC order by `Anzahl` desc
 
@@ -296,8 +318,15 @@ stopwords.write.saveAsTable(tableName);
 // COMMAND ----------
 
 // MAGIC %sql
+// MAGIC select * from stopwords
+
+// COMMAND ----------
+
+// MAGIC %sql
 // MAGIC create or replace view tweets_prep_step_4 as
-// MAGIC select user
+// MAGIC select id
+// MAGIC       ,user
+// MAGIC       ,original_text
 // MAGIC       ,created_at
 // MAGIC       ,word
 // MAGIC from tweets_prep_step_3

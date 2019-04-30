@@ -12,6 +12,9 @@
 - [Texte für SQL Analyse vorbereiten (Source)](databricks-notebooks/big-data-analytics/Texte für SQL Analysen vorbereiten.scala)
 - [Themen in Texten identifizieren (HTML)](databricks-notebooks/big-data-analytics/Themen identifizieren.html)
 - [Themen in Texten identifizieren (Source)](databricks-notebooks/big-data-analytics/Themen identifizieren.scala)
+- [Text Analytics mit Azure ML (HTML)](databricks-notebooks/big-data-analytics/Text Analytics mit Azure ML.html)
+- [Text Analytics mit Azure ML (Source)](databricks-notebooks/big-data-analytics/Text Analytics mit Azure ML.sql)
+
 
 
 # SQL Tutorial

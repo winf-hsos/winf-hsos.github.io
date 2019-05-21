@@ -14,7 +14,7 @@
 - [Themen in Texten identifizieren (Source)](databricks-notebooks/big-data-analytics/Themen identifizieren.scala)
 - [Text Analytics mit Azure ML (HTML)](databricks-notebooks/big-data-analytics/Text Analytics mit Azure ML.html)
 - [Text Analytics mit Azure ML (Source)](databricks-notebooks/big-data-analytics/Text Analytics mit Azure ML.sql)
-- [Image Analytics mit Azure ML (HTML)](databricks-notebooks/big-data-analytics/Image Analytics with Azure ML.html)
+- [Image Analytics mit Azure ML (HTML)](databricks-notebooks/big-data-analytics/Image Analytics mit Azure ML.html)
 - [Image Analytics mit Azure ML (Source)](databricks-notebooks/big-data-analytics/Image Analytics mit Azure ML.sql)
 
 

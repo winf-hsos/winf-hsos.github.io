@@ -1,3 +1,7 @@
+# Applied Analytics
+
+- [Fallstudie Teil 1 - Verkaufsanalysen](databricks-notebooks/applied-analytics/Template - Campusbier Verkäufe.sql)
+
 # Big Data Analytics
 
 - [Amazon Reviews Template (HTML)](databricks-notebooks/big-data-analytics/Amazon Reviews Template.html)

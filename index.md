@@ -1,6 +1,8 @@
 # Applied Analytics
 
-- [Fallstudie Teil 1 - Verkaufsanalysen](databricks-notebooks/applied-analytics/Template - Campusbier Verkäufe.sql)
+- [Fallstudie Teil 1 - Verkaufsanalysen (HTML)](databricks-notebooks/applied-analytics/Template - Campusbier Verkäufe.html)
+- [Fallstudie Teil 1 - Verkaufsanalysen (Source)](databricks-notebooks/applied-analytics/Template - Campusbier Verkäufe.sql)
+
 
 # Big Data Analytics
 

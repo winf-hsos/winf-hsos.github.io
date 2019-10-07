@@ -36,6 +36,9 @@
 
 - [Template - Orangenlimonade (HTML)](databricks-notebooks/empirisches-arbeiten/Template - Orangenlimonade.html)
 - [Template - Orangenlimonade (Source)](databricks-notebooks/empirisches-arbeiten/Template - Orangenlimonade.py)
+- [Template - Agrar@Twitter (HTML)](databricks-notebooks/empirisches-arbeiten/Template - Agrar@Twitter.html)
+- [Template - Agrar@Twitter (Source)](databricks-notebooks/empirisches-arbeiten/Template - Agrar@Twitter.scala)
+
 - [2 - Machine Learning - Beispiele](databricks-notebooks/empirisches-arbeiten/2 - Machine Learning - Beispiele.html)
 - [3 - Text Analytics](databricks-notebooks/empirisches-arbeiten/3 - Text Analytics.html)
 

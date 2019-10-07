@@ -34,7 +34,8 @@
 
 ## Notebook Templates
 
-- [1 - Einführung SQL](databricks-notebooks/empirisches-arbeiten/1 - Einführung SQL.html)
+- [Template - Orangenlimonade (HTML)](databricks-notebooks/empirisches-arbeiten/Template - Orangenlimonade.html)
+- [Template - Orangenlimonade (Source)](databricks-notebooks/empirisches-arbeiten/Template - Orangenlimonade.py)
 - [2 - Machine Learning - Beispiele](databricks-notebooks/empirisches-arbeiten/2 - Machine Learning - Beispiele.html)
 - [3 - Text Analytics](databricks-notebooks/empirisches-arbeiten/3 - Text Analytics.html)
 

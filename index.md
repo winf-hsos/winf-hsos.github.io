@@ -52,6 +52,9 @@
 - [Databricks Notebook - Template - Wine Reviews](databricks-notebooks/information-management/Template - Wine Reviews.html)
 - [Databricks Notebook - Template - Craft Beer](databricks-notebooks/information-management/Template - Craft Beer.html)
 - [Databricks Notebook - Template - Simpsons](databricks-notebooks/information-management/Template - Simpsons.html)
+- [Databricks Notebook - Template - Beer Sales 1.0 (HTML)](databricks-notebooks/information-management/Template - Beer Sales 1.0.html)
+- [Databricks Notebook - Template - Beer Sales 1.0 (Source)](databricks-notebooks/information-management/Template - Beer Sales 1.0.sql)
+
 
 ## Illustrative Notebooks
 - [Example Notebook - SQL Joins](databricks-notebooks/information-management/Example Notebook - SQL Joins.html) 

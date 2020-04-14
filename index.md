@@ -1,4 +1,6 @@
-# Applied Analytics
+# Databricks Notebool Templates
+
+## Applied Analytics
 
 - [Fallstudie Teil 1 - Verkaufsanalysen (HTML)](databricks-notebooks/applied-analytics/Template - Campusbier Verkäufe.html)
 - [Fallstudie Teil 1 - Verkaufsanalysen (Source)](databricks-notebooks/applied-analytics/Template - Campusbier Verkäufe.sql)
@@ -6,7 +8,7 @@
 - [Template - Campusbier 1.0 - Vorbefragung(Source)](databricks-notebooks/applied-analytics/Template - Campusbier 1.0 - Vorbefragung.sql)
 
 
-# Big Data Analytics
+## Big Data Analytics
 
 - [Amazon Reviews Template (HTML)](databricks-notebooks/big-data-analytics/Amazon Reviews Template.html)
 - [Amazon Reviews Template (Source)](databricks-notebooks/big-data-analytics/Amazon Reviews Template.scala)
@@ -27,18 +29,16 @@
 - [Hashtag Paare für Gephi exportieren (HTML)](databricks-notebooks/big-data-analytics/Hashtag Paare für Gephi exportieren.html)
 - [Hashtag Paare für Gephi exportieren (Source)](databricks-notebooks/big-data-analytics/Hashtag Paare für Gephi exportieren.sql)
 
-## SS 2020
+### SS 2020
 
 - [Explore Tweets (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Explore Tweets.html)
 - [Explore Tweets (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Explore Tweets.sql)
 
-# SQL Tutorial
+## SQL Tutorial
 
 - [#1 - Der SELECT-Befehl](databricks-notebooks/sql-tutorial/1_Der_SELECT_Befehl.html)
 
-# Empirisches Arbeiten
-
-## Notebook Templates
+## Empirisches Arbeiten
 
 - [Template - Orangenlimonade (HTML)](databricks-notebooks/empirisches-arbeiten/Template - Orangenlimonade.html)
 - [Template - Orangenlimonade (Source)](databricks-notebooks/empirisches-arbeiten/Template - Orangenlimonade.py)
@@ -48,10 +48,9 @@
 - [2 - Machine Learning - Beispiele](databricks-notebooks/empirisches-arbeiten/2 - Machine Learning - Beispiele.html)
 - [3 - Text Analytics](databricks-notebooks/empirisches-arbeiten/3 - Text Analytics.html)
 
-# Information Management
+## Information Management
 
-## Notebook Templates
-
+### Notebook Templates
 - [Databricks Notebook - Template - Crimes in Chicago 2018](databricks-notebooks/information-management/Template - Crimes in Chicago 2018.html)
 - [Databricks Notebook - Template - Wine Reviews](databricks-notebooks/information-management/Template - Wine Reviews.html)
 - [Databricks Notebook - Template - Craft Beer](databricks-notebooks/information-management/Template - Craft Beer.html)
@@ -60,28 +59,28 @@
 - [Databricks Notebook - Template - Beer Sales 1.0 (Source)](databricks-notebooks/information-management/Template - Beer Sales 1.0.sql)
 
 
-## Illustrative Notebooks
+### Illustrative Notebooks
 - [Example Notebook - SQL Joins](databricks-notebooks/information-management/Example Notebook - SQL Joins.html) 
 - [Subqueries and Window Functions](databricks-notebooks/information-management/Subqueries and Window Functions.html) 
 
-## Case Study Templates
+### Case Study Templates
 
 - [Template Case A: Crimes in Chicago](databricks-notebooks/information-management/Template Case A Crimes in Chicago.html)
 - [Template Case B: Crimes in LA](databricks-notebooks/information-management/Template - Crimes in LA.html)
 
-# Web Engingeering Examples
+## Web Engingeering Examples
 
 - [Google Maps Example I](web-examples/index.html)
 
-# Databricks Notebooks:
+## Databricks Notebooks:
 
-## Fallstudie
+### Fallstudie
 - [Databricks Notebook - Template Phase 1](databricks-notebooks/fallstudie-phase-1-template.html)
 - [Databricks Notebook - Template Phase 2](databricks-notebooks/fallstudie-phase-2-template.html)
 - [Databricks Notebook - Template Phase 3](databricks-notebooks/fallstudie-phase-3-template.html)
 - [Databricks Notebook - Template Phase 4](databricks-notebooks/fallstudie-phase-4-template.html)
 
-## Übungen
+### Übungen
 - [Databricks Notebook - Beispiele auf dem 2. Termin](databricks-notebooks/termin-2.html)
 - [Databricks Notebook - Beispiele auf dem 3. Termin](databricks-notebooks/termin-3.html)
 - [Databricks Notebook - Beispiele auf dem 4. Termin](databricks-notebooks/termin-4.html)

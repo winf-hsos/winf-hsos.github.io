@@ -34,6 +34,10 @@
 - [Explore Tweets (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Explore Tweets.html)
 - [Explore Tweets (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Explore Tweets.sql)
 
+- [Twitter Data Import Template (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Twitter Data Import Template.html)
+- [Twitter Data Import Template (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Twitter Data Import Template.sql)
+
+
 ## SQL Tutorial
 
 - [#1 - Der SELECT-Befehl](databricks-notebooks/sql-tutorial/1_Der_SELECT_Befehl.html)

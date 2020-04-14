@@ -27,6 +27,10 @@
 - [Hashtag Paare für Gephi exportieren (HTML)](databricks-notebooks/big-data-analytics/Hashtag Paare für Gephi exportieren.html)
 - [Hashtag Paare für Gephi exportieren (Source)](databricks-notebooks/big-data-analytics/Hashtag Paare für Gephi exportieren.sql)
 
+## SS 2020
+
+- [Explore Tweets (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Explore Tweets.html)
+- [Explore Tweets (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Explore Tweets.sql)
 
 # SQL Tutorial
 

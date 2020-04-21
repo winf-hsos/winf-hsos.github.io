@@ -7,7 +7,6 @@
 - [Template - Campusbier 1.0 - Vorbefragung(HTML)](databricks-notebooks/applied-analytics/Template - Campusbier 1.0 - Vorbefragung.html)
 - [Template - Campusbier 1.0 - Vorbefragung(Source)](databricks-notebooks/applied-analytics/Template - Campusbier 1.0 - Vorbefragung.sql)
 
-
 ## Big Data Analytics
 
 - [Amazon Reviews Template (HTML)](databricks-notebooks/big-data-analytics/Amazon Reviews Template.html)
@@ -61,7 +60,6 @@
 - [Databricks Notebook - Template - Simpsons](databricks-notebooks/information-management/Template - Simpsons.html)
 - [Databricks Notebook - Template - Beer Sales 1.0 (HTML)](databricks-notebooks/information-management/Template - Beer Sales 1.0.html)
 - [Databricks Notebook - Template - Beer Sales 1.0 (Source)](databricks-notebooks/information-management/Template - Beer Sales 1.0.sql)
-
 
 ### Illustrative Notebooks
 - [Example Notebook - SQL Joins](databricks-notebooks/information-management/Example Notebook - SQL Joins.html) 

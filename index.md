@@ -36,6 +36,8 @@
 - [Twitter Data Import Template (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Twitter Data Import Template.sql)
 - [Search in Text with SQL (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Search in Text with SQL.html)
 - [Search in Text with SQL (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Search in Text with SQL.sql)
+- [Date and Time with SQL (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Date and Time with SQL.html)
+- [Date and Time with SQL (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Date and Time with SQL.sql)
 
 ## SQL Tutorial
 

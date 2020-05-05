@@ -38,6 +38,8 @@
 - [Search in Text with SQL (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Search in Text with SQL.sql)
 - [Date and Time with SQL (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Date and Time with SQL.html)
 - [Date and Time with SQL (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Date and Time with SQL.sql)
+- [Arrays with SQL (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Arrays with SQL.html)
+- [Arrays with SQL (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Arrays with SQL.sql)
 
 ## SQL Tutorial
 

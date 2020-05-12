@@ -40,6 +40,9 @@
 - [Date and Time with SQL (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Date and Time with SQL.sql)
 - [Arrays with SQL (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Arrays with SQL.html)
 - [Arrays with SQL (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Arrays with SQL.sql)
+- [NLP with SQL - Prepare Data (HTML)](databricks-notebooks/big-data-analytics/ss-2020/NLP with SQL - Prepare Data.html)
+- [NLP with SQL - Prepare Data (SQL)](databricks-notebooks/big-data-analytics/ss-2020/NLP with SQL - Prepare Data.sql)
+
 
 ## SQL Tutorial
 

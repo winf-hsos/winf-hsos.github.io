@@ -42,7 +42,8 @@
 - [Arrays with SQL (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Arrays with SQL.sql)
 - [NLP with SQL - Prepare Data (HTML)](databricks-notebooks/big-data-analytics/ss-2020/NLP with SQL - Prepare Data.html)
 - [NLP with SQL - Prepare Data (SQL)](databricks-notebooks/big-data-analytics/ss-2020/NLP with SQL - Prepare Data.sql)
-
+- [Extract and analyze emojis (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Extract and analyze emojis.html)
+- [Extract and analyze emojis (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Extract and analyze emojis.sql)
 
 ## SQL Tutorial
 

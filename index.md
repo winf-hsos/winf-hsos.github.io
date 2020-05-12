@@ -44,6 +44,8 @@
 - [NLP with SQL - Prepare Data (SQL)](databricks-notebooks/big-data-analytics/ss-2020/NLP with SQL - Prepare Data.sql)
 - [Extract and analyze emojis (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Extract and analyze emojis.html)
 - [Extract and analyze emojis (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Extract and analyze emojis.sql)
+- [Load data from Google Spreadsheets (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Load data from Google Spreadsheets.html)
+- [Load data from Google Spreadsheets (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Load data from Google Spreadsheets.sql)
 
 ## SQL Tutorial
 

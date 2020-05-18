@@ -34,7 +34,7 @@ select created_at as `Timestamp`
       ,weekofyear(created_at) as `Week of Year`
       ,month(created_at) as `Month`
       ,year(created_at) as `Year`
-      ,date_format(created_at, 'YYYY-MM') as `Display Month`      
+      ,date_format(created_at, 'yyyy-MM') as `Display Month`      
 from tweets
 
 -- COMMAND ----------
@@ -80,7 +80,7 @@ from tweets
 
 -- COMMAND ----------
 
-select date_format(created_at, 'YYYY-MM') as `Month`
+select date_format(created_at, 'yyyy-MM') as `Month`
       ,count(*) as `Number Tweets`
 from tweets
 where year(created_at) = year(now())

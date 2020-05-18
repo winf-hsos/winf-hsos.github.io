@@ -78,3 +78,34 @@ dbutils.fs.ls(PATH)
 // COMMAND ----------
 
 display(dbutils.fs.ls("/FileStore"))
+
+// COMMAND ----------
+
+// MAGIC %md
+// MAGIC ## Fix the error `Cannot create the managed table ...`
+// MAGIC ---
+// MAGIC When importing data you may get a similar message to this:
+// MAGIC 
+// MAGIC `org.apache.spark.sql.AnalysisException: Can not create the managed table('twitter_followers'). The associated location('dbfs:/user/hive/warehouse/tweets') already exists.`
+// MAGIC 
+// MAGIC Follow these steps to fix the problem:
+
+// COMMAND ----------
+
+// MAGIC %md
+// MAGIC ### Check the folder and list the content
+// MAGIC ---
+// MAGIC The message says it can't create a table because it is already there. Something went wrong with deleting it. So what we can do to fix the problem is delete the folder manually. To check that you have the right path, list the content of the folder first:
+
+// COMMAND ----------
+
+display(dbutils.fs.ls("dbfs:/user/hive/warehouse/tweets"))
+
+// COMMAND ----------
+
+// MAGIC %md
+// MAGIC Now, copy the path into the following command:
+
+// COMMAND ----------
+
+dbutils.fs.rm("dbfs:/user/hive/warehouse/tweets", recurse=true)

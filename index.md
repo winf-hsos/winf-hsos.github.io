@@ -50,7 +50,8 @@
 - [Word Clouds with Python (PYTHON)](databricks-notebooks/big-data-analytics/ss-2020/Word Clouds with Python.py)
 - [Visualizations with Python (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Visualizations with Python.html)
 - [Visualizations with Python (PYTHON)](databricks-notebooks/big-data-analytics/ss-2020/Visualizations with Python.py)
-
+- [Clean-Up Databricks Files and Tables (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Clean-Up Databricks Files and Tables.html)
+- [Clean-Up Databricks Files and Tables (SCALA)](databricks-notebooks/big-data-analytics/ss-2020/Clean-Up Databricks Files and Tables.scala)
 
 ## SQL Tutorial
 

@@ -46,6 +46,8 @@
 - [Extract and analyze emojis (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Extract and analyze emojis.sql)
 - [Load data from Google Spreadsheets (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Load data from Google Spreadsheets.html)
 - [Load data from Google Spreadsheets (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Load data from Google Spreadsheets.sql)
+- [Word Clouds with Python (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Word Clouds with Python.html)
+- [Word Clouds with Python (PYTHON)](databricks-notebooks/big-data-analytics/ss-2020/Word Clouds with Python.py)
 
 ## SQL Tutorial
 

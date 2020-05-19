@@ -52,6 +52,8 @@
 - [Visualizations with Python (PYTHON)](databricks-notebooks/big-data-analytics/ss-2020/Visualizations with Python.py)
 - [Clean-Up Databricks Files and Tables (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Clean-Up Databricks Files and Tables.html)
 - [Clean-Up Databricks Files and Tables (SCALA)](databricks-notebooks/big-data-analytics/ss-2020/Clean-Up Databricks Files and Tables.scala)
+- [Load Covid-19 Data from Our World in Data (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Load Covid-19 Data from Our World in Data.html)
+- [Load Covid-19 Data from Our World in Data (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Load Covid-19 Data from Our World in Data.sql)
 
 ## SQL Tutorial
 

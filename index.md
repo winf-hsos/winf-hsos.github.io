@@ -54,6 +54,8 @@
 - [Clean-Up Databricks Files and Tables (SCALA)](databricks-notebooks/big-data-analytics/ss-2020/Clean-Up Databricks Files and Tables.scala)
 - [Load Covid-19 Data from Our World in Data (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Load Covid-19 Data from Our World in Data.html)
 - [Load Covid-19 Data from Our World in Data (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Load Covid-19 Data from Our World in Data.sql)
+- [NLP with Python and spaCy - First Steps (HTML)](databricks-notebooks/big-data-analytics/ss-2020/NLP with Python and spaCy - First Steps.html)
+- [NLP with Python and spaCy - First Steps (PYTHON)](databricks-notebooks/big-data-analytics/ss-2020/NLP with Python and spaCy - First Steps.sql)
 
 ## SQL Tutorial
 

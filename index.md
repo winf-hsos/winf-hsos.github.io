@@ -56,10 +56,8 @@
 - [Load Covid-19 Data from Our World in Data (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Load Covid-19 Data from Our World in Data.sql)
 - [NLP with Python and spaCy - First Steps (HTML)](databricks-notebooks/big-data-analytics/ss-2020/NLP with Python and spaCy - First Steps.html)
 - [NLP with Python and spaCy - First Steps (PYTHON)](databricks-notebooks/big-data-analytics/ss-2020/NLP with Python and spaCy - First Steps.sql)
-
 - [Working with URLs (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Working with URLs.html)
 - [Working with URLs (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Working with URLs.sql)
-
 
 ## SQL Tutorial
 

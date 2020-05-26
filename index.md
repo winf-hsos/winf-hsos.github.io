@@ -57,6 +57,10 @@
 - [NLP with Python and spaCy - First Steps (HTML)](databricks-notebooks/big-data-analytics/ss-2020/NLP with Python and spaCy - First Steps.html)
 - [NLP with Python and spaCy - First Steps (PYTHON)](databricks-notebooks/big-data-analytics/ss-2020/NLP with Python and spaCy - First Steps.sql)
 
+- [Working with URLs (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Working with URLs.html)
+- [Working with URLs (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Working with URLs.sql)
+
+
 ## SQL Tutorial
 
 - [#1 - Der SELECT-Befehl](databricks-notebooks/sql-tutorial/1_Der_SELECT_Befehl.html)

@@ -125,12 +125,21 @@ where array_contains(urls.host, 'bit.ly')
 
 -- COMMAND ----------
 
--- MAGIC %python
+-- MAGIC  %python
 -- MAGIC import requests
 -- MAGIC from pyspark.sql.types import StringType
 -- MAGIC 
 -- MAGIC def unshorten_url(url):
--- MAGIC     return requests.head(url, allow_redirects=True).url
+-- MAGIC   try:
+-- MAGIC     return requests.head(url, allow_redirects=True, timeout = 2).url
+-- MAGIC   except requests.exceptions.ReadTimeout:
+-- MAGIC         print("READ TIMED OUT -", url)
+-- MAGIC   except requests.exceptions.ConnectionError:
+-- MAGIC         print( "CONNECT ERROR -", url)
+-- MAGIC   except eventlet.timeout.Timeout:
+-- MAGIC         print( "TOTAL TIMEOUT -", url)
+-- MAGIC   except requests.exceptions.RequestException:
+-- MAGIC         print( "OTHER REQUESTS EXCEPTION -", url)
 -- MAGIC 
 -- MAGIC # Register as SQL user defined function
 -- MAGIC spark.udf.register("unshorten_url", unshorten_url, StringType())
@@ -168,8 +177,8 @@ where array_contains(urls.host, 'bit.ly')
 -- MAGIC   select id
 -- MAGIC         ,url.clean_url as url
 -- MAGIC   from tweets_urls
--- MAGIC   tablesample (20 rows)
 -- MAGIC   where url.host in ("bit.ly", "ow.ly", "tinyurl.com", "dlvr.it")
+-- MAGIC   limit 20
 -- MAGIC ''')
 -- MAGIC 
 -- MAGIC shortened_urls_array = np.array(urls_df.select("url").collect()).flatten()
@@ -353,7 +362,10 @@ select * from unshortened_urls
 -- MAGIC result = []
 -- MAGIC 
 -- MAGIC # This function extracts the title from URLs by calling them and parsing the resulting HTML document
--- MAGIC def get_title_from_url(url): 
+-- MAGIC def get_title_from_url(url):
+-- MAGIC   if url is None:
+-- MAGIC     return None
+-- MAGIC   
 -- MAGIC   n = requests.get(url)
 -- MAGIC   
 -- MAGIC   # This regular exression works to get titles

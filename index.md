@@ -58,6 +58,9 @@
 - [NLP with Python and spaCy - First Steps (PYTHON)](databricks-notebooks/big-data-analytics/ss-2020/NLP with Python and spaCy - First Steps.sql)
 - [Working with URLs (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Working with URLs.html)
 - [Working with URLs (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Working with URLs.sql)
+- [Network visualization with D3.js (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Network visualization with D3.js.html)
+- [Network visualization with D3.js (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Network visualization with D3.js.sql)
+
 
 ## SQL Tutorial
 

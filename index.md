@@ -60,6 +60,8 @@
 - [Working with URLs (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Working with URLs.sql)
 - [Network visualization with D3.js (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Network visualization with D3.js.html)
 - [Network visualization with D3.js (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Network visualization with D3.js.sql)
+- [Export hashtag pairs for visualization with Gephi (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Export hashtag pairs for visualization with Gephi.html)
+- [Export hashtag pairs for visualization with Gephi (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Export hashtag pairs for visualization with Gephi.sql)
 
 
 ## SQL Tutorial

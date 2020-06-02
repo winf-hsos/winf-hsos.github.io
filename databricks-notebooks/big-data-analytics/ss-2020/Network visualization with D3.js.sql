@@ -13,6 +13,28 @@
 
 -- COMMAND ----------
 
+-- MAGIC %md
+-- MAGIC ### Explode hashtag array and create a view
+
+-- COMMAND ----------
+
+create or replace view hashtags as
+  -- Make all hashtags lower case for easier comparison
+  select id
+        ,lower(hashtag) as hashtag
+        ,created_at
+  from (
+    select id, explode(hashtags) as hashtag, created_at
+    from twitter_timelines
+  )
+
+-- COMMAND ----------
+
+-- MAGIC %md
+-- MAGIC ### Create a view for hashtag pairs
+
+-- COMMAND ----------
+
 create or replace view hashtag_pairs as
 select distinct
    id
@@ -37,12 +59,12 @@ select * from hashtag_pairs
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC # 2. Export the nodes with SQL
+-- MAGIC ## 2. Export the nodes with SQL
 
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC ## Create a view to extract the nodes
+-- MAGIC ### Create a view to extract the nodes
 
 -- COMMAND ----------
 
@@ -58,7 +80,7 @@ having count(1) > 10
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC ## Convert nodes to JSON
+-- MAGIC ### Convert nodes to JSON
 
 -- COMMAND ----------
 
@@ -71,12 +93,12 @@ having count(1) > 10
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC # 3. Export the edges with SQL
+-- MAGIC ## 3. Export the edges with SQL
 
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC ## Create a view to extract the edges
+-- MAGIC ### Create a view to extract the edges
 
 -- COMMAND ----------
 
@@ -94,7 +116,7 @@ order by count(1) desc
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC ## Convert edges to JSON
+-- MAGIC ### Convert edges to JSON
 
 -- COMMAND ----------
 
@@ -107,7 +129,7 @@ order by count(1) desc
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC # 4. Create a force layout visulization with D3.js
+-- MAGIC ## 4. Create a force layout visulization with D3.js
 -- MAGIC ---
 -- MAGIC You will need to play around with the parameters until you find a good fit for your data:<br><br>
 -- MAGIC 

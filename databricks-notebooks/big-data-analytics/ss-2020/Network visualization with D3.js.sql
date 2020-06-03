@@ -27,7 +27,7 @@ create or replace view hashtags as
         ,created_at
   from (
     select id, explode(hashtags) as hashtag, created_at
-    from twitter_timelines
+    from tweets
   )
 
 -- COMMAND ----------
@@ -164,6 +164,7 @@ order by count(1) desc
 -- MAGIC   }
 -- MAGIC </style>
 -- MAGIC <svg width="2000" height="1000"></svg>
+-- MAGIC 
 -- MAGIC <script src="https://d3js.org/d3.v4.min.js"></script>
 -- MAGIC <script>
 -- MAGIC   var svg = d3.select("svg"),
@@ -280,10 +281,67 @@ order by count(1) desc
 -- MAGIC     if (!d3.event.active) simulation.alphaTarget(0);
 -- MAGIC     d.fx = null;
 -- MAGIC     d.fy = null;
--- MAGIC   }
+-- MAGIC   }  
 -- MAGIC </script>
 -- MAGIC 
 -- MAGIC """ % (nodes, edges)
 -- MAGIC 
 -- MAGIC #print(html)
 -- MAGIC displayHTML(html)
+
+-- COMMAND ----------
+
+-- MAGIC %python
+-- MAGIC html = """
+-- MAGIC <!DOCTYPE html>
+-- MAGIC <meta charset="utf-8">
+-- MAGIC <body>
+-- MAGIC <script src="//d3js.org/d3.v3.min.js"></script>
+-- MAGIC <script>
+-- MAGIC 
+-- MAGIC var data = { nodes: %s, edges: %s };
+-- MAGIC 
+-- MAGIC var width = 960,
+-- MAGIC     height = 500;
+-- MAGIC 
+-- MAGIC var canvas = d3.select("body").append("canvas")
+-- MAGIC     .attr("width", width)
+-- MAGIC     .attr("height", height);
+-- MAGIC 
+-- MAGIC var force = d3.layout.force()
+-- MAGIC     .size([width, height]);
+-- MAGIC 
+-- MAGIC 
+-- MAGIC var context = canvas.node().getContext("2d");
+-- MAGIC 
+-- MAGIC force
+-- MAGIC     .nodes(data.nodes)
+-- MAGIC     .links(data.edges)
+-- MAGIC     .on("tick", tick)
+-- MAGIC     .start();
+-- MAGIC 
+-- MAGIC function tick() {
+-- MAGIC   context.clearRect(0, 0, width, height);
+-- MAGIC 
+-- MAGIC   // draw links
+-- MAGIC   context.strokeStyle = "#ccc";
+-- MAGIC   context.beginPath();
+-- MAGIC   data.edges.forEach(function(d) {
+-- MAGIC     context.moveTo(d.source.x, d.source.y);
+-- MAGIC     context.lineTo(d.target.x, d.target.y);
+-- MAGIC   });
+-- MAGIC   context.stroke();
+-- MAGIC 
+-- MAGIC   // draw nodes
+-- MAGIC   context.fillStyle = "steelblue";
+-- MAGIC   context.beginPath();
+-- MAGIC   data.nodes.forEach(function(d) {
+-- MAGIC     context.moveTo(d.x, d.y);
+-- MAGIC     context.arc(d.x, d.y, 4.5, 0, 2 * Math.PI);
+-- MAGIC   });
+-- MAGIC   context.fill();
+-- MAGIC }
+-- MAGIC </script>""" % (nodes, edges)
+-- MAGIC 
+-- MAGIC print(html)
+-- MAGIC #displayHTML(html)

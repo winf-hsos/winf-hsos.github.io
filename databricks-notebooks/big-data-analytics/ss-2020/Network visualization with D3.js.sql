@@ -5,6 +5,8 @@
 -- MAGIC One quick way to identify topics in tweets is to analyze the use of keywords or hashtags systematically. A common approach is to find pairs of hashtags (or words) that are often mentioned together in the same tweets. Visualizing the result such that pairs that often appear together are drawn close to each other gives us a visual way to explore a topic map.
 -- MAGIC 
 -- MAGIC In this notebook, you'll learn how to quickly visualize networks using D3.js.
+-- MAGIC 
+-- MAGIC You can find a good introduction to the force layout with D3.js here: <a href="https://www.d3indepth.com/force-layout/" target="_blank">Force layout on d3indepth.com</a>
 
 -- COMMAND ----------
 

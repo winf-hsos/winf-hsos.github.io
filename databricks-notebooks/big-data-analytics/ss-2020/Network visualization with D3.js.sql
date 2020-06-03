@@ -7,6 +7,8 @@
 -- MAGIC In this notebook, you'll learn how to quickly visualize networks using D3.js.
 -- MAGIC 
 -- MAGIC You can find a good introduction to the force layout with D3.js here: <a href="https://www.d3indepth.com/force-layout/" target="_blank">Force layout on d3indepth.com</a>
+-- MAGIC 
+-- MAGIC Find a collection of examples of what you can do with D3.js here: <a href="https://observablehq.com/@d3/gallery" target="_blank">D3.js gallery</a>
 
 -- COMMAND ----------
 
@@ -131,7 +133,7 @@ order by count(1) desc
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC ## 4. Create a force layout visulization with D3.js
+-- MAGIC ## 4. Create a force layout visulization with D3.js (SVG version)
 -- MAGIC ---
 -- MAGIC You will need to play around with the parameters until you find a good fit for your data:<br><br>
 -- MAGIC 
@@ -291,57 +293,224 @@ order by count(1) desc
 
 -- COMMAND ----------
 
+-- MAGIC %md
+-- MAGIC ## 5. Create a force layout visulization with D3.js (CANVAS version with zoom)
+-- MAGIC ---
+-- MAGIC You will need to play around with the parameters until you find a good fit for your data:<br><br>
+-- MAGIC 
+-- MAGIC 
+-- MAGIC - `.distance(function(d) { return 2 * (maxWeight  - d.weight); })` - This function determines the physical length between the edges
+-- MAGIC - `.strength(function(d) { return 1 * (d.weight / maxWeight); })` - This function determines elasticity of the connection - how easily does it stretch?
+-- MAGIC - `.force("charge", d3.forceManyBody().strength(-250))` - This function sets the gravity (positive/negative) with which the points attract or repel each other
+-- MAGIC - `.force("x", d3.forceX(width / 2).strength(.01))` - This function (for y respectively) determines the location of a center point and the strength with which each point is attracted to it
+
+-- COMMAND ----------
+
 -- MAGIC %python
 -- MAGIC html = """
--- MAGIC <!DOCTYPE html>
--- MAGIC <meta charset="utf-8">
--- MAGIC <body>
--- MAGIC <script src="//d3js.org/d3.v3.min.js"></script>
--- MAGIC <script>
+-- MAGIC   <html>
+-- MAGIC   <head>
+-- MAGIC   <meta charset="utf-8" />
+-- MAGIC   <script src="https://d3js.org/d3-force.v1.min.js"></script>
+-- MAGIC   <script src="https://d3js.org/d3.v4.min.js"></script>
 -- MAGIC 
--- MAGIC var data = { nodes: %s, edges: %s };
+-- MAGIC </head>
+-- MAGIC   <body>
 -- MAGIC 
--- MAGIC var width = 960,
--- MAGIC     height = 500;
+-- MAGIC     <div id="graphDiv"></div>
 -- MAGIC 
--- MAGIC var canvas = d3.select("body").append("canvas")
--- MAGIC     .attr("width", width)
--- MAGIC     .attr("height", height);
+-- MAGIC <hr/>
 -- MAGIC 
--- MAGIC var force = d3.layout.force()
--- MAGIC     .size([width, height]);
+-- MAGIC     <button onclick="download('png')">
+-- MAGIC       Download PNG
+-- MAGIC     </button>
+-- MAGIC 
+-- MAGIC     <button onclick="download('jpg')">
+-- MAGIC       Download JPG
+-- MAGIC     </button>
 -- MAGIC 
 -- MAGIC 
--- MAGIC var context = canvas.node().getContext("2d");
+-- MAGIC  <script>
+-- MAGIC       var data = { nodes: %s, links: %s };
+-- MAGIC    
+-- MAGIC    
+-- MAGIC       // Get the maximum weight for an edge
+-- MAGIC       var maxWeight = 0;
+-- MAGIC       for (var i = 0; i < data.links.length; i++) {
+-- MAGIC         if (maxWeight < data.links[i].weight) maxWeight = data.links[i].weight;
+-- MAGIC       }
 -- MAGIC 
--- MAGIC force
--- MAGIC     .nodes(data.nodes)
--- MAGIC     .links(data.edges)
--- MAGIC     .on("tick", tick)
--- MAGIC     .start();
+-- MAGIC       var height = 1000;
+-- MAGIC       var width = 2000;
+-- MAGIC       
 -- MAGIC 
--- MAGIC function tick() {
--- MAGIC   context.clearRect(0, 0, width, height);
+-- MAGIC       // Append the canvas to the HTML document
+-- MAGIC       var graphCanvas = d3
+-- MAGIC         .select("#graphDiv")
+-- MAGIC         .append("canvas")
+-- MAGIC         .attr("width", width + "px")
+-- MAGIC         .attr("height", height + "px")
+-- MAGIC         .node();
 -- MAGIC 
--- MAGIC   // draw links
--- MAGIC   context.strokeStyle = "#ccc";
--- MAGIC   context.beginPath();
--- MAGIC   data.edges.forEach(function(d) {
--- MAGIC     context.moveTo(d.source.x, d.source.y);
--- MAGIC     context.lineTo(d.target.x, d.target.y);
--- MAGIC   });
--- MAGIC   context.stroke();
+-- MAGIC       var context = graphCanvas.getContext("2d");
 -- MAGIC 
--- MAGIC   // draw nodes
--- MAGIC   context.fillStyle = "steelblue";
--- MAGIC   context.beginPath();
--- MAGIC   data.nodes.forEach(function(d) {
--- MAGIC     context.moveTo(d.x, d.y);
--- MAGIC     context.arc(d.x, d.y, 4.5, 0, 2 * Math.PI);
--- MAGIC   });
--- MAGIC   context.fill();
--- MAGIC }
--- MAGIC </script>""" % (nodes, edges)
+-- MAGIC       var div = d3
+-- MAGIC         .select("body")
+-- MAGIC         .append("div")
+-- MAGIC         .attr("class", "tooltip")
+-- MAGIC         .style("opacity", 0);
 -- MAGIC 
--- MAGIC print(html)
--- MAGIC #displayHTML(html)
+-- MAGIC       var simulation = d3
+-- MAGIC         .forceSimulation()
+-- MAGIC         .force(
+-- MAGIC           "link",
+-- MAGIC           d3
+-- MAGIC             .forceLink()
+-- MAGIC             .id(function(d) {
+-- MAGIC               return d.id;
+-- MAGIC             })
+-- MAGIC             .distance(function(d) {
+-- MAGIC               return 2 * (maxWeight - d.weight);
+-- MAGIC             })
+-- MAGIC             .strength(function(d) {
+-- MAGIC               return 1 * (d.weight / maxWeight);;
+-- MAGIC             })
+-- MAGIC         )
+-- MAGIC         .force("charge", d3.forceManyBody().strength(-250))
+-- MAGIC         .force("center", d3.forceCenter(width / 2, height / 2))
+-- MAGIC         .force("x", d3.forceX(width / 2).strength(0.01))
+-- MAGIC         .force("y", d3.forceY(height / 2).strength(0.01))
+-- MAGIC         .alphaTarget(0)
+-- MAGIC         .alphaDecay(0.05);
+-- MAGIC 
+-- MAGIC       var transform = d3.zoomIdentity;
+-- MAGIC 
+-- MAGIC       initGraph(data);
+-- MAGIC 
+-- MAGIC       function initGraph(tempData) {
+-- MAGIC         function zoomed() {
+-- MAGIC           console.log("zooming");
+-- MAGIC           transform = d3.event.transform;
+-- MAGIC           simulationUpdate();
+-- MAGIC         }
+-- MAGIC 
+-- MAGIC         d3.select(graphCanvas)
+-- MAGIC           .call(
+-- MAGIC             d3
+-- MAGIC               .drag()
+-- MAGIC               .subject(dragsubject)
+-- MAGIC               .on("start", dragstarted)
+-- MAGIC               .on("drag", dragged)
+-- MAGIC               .on("end", dragended)
+-- MAGIC           )
+-- MAGIC           .call(
+-- MAGIC             d3
+-- MAGIC               .zoom()
+-- MAGIC               .scaleExtent([1 / 10, 8])
+-- MAGIC               .on("zoom", zoomed)
+-- MAGIC           );
+-- MAGIC 
+-- MAGIC         function dragsubject() {
+-- MAGIC           var i,
+-- MAGIC             x = transform.invertX(d3.event.x),
+-- MAGIC             y = transform.invertY(d3.event.y),
+-- MAGIC             dx,
+-- MAGIC             dy;
+-- MAGIC           for (i = tempData.nodes.length - 1; i >= 0; --i) {
+-- MAGIC             node = tempData.nodes[i];
+-- MAGIC             dx = x - node.x;
+-- MAGIC             dy = y - node.y;
+-- MAGIC 
+-- MAGIC             let radius = Math.min(30, node.size)
+-- MAGIC             if (dx * dx + dy * dy < radius * radius) {
+-- MAGIC               node.x = transform.applyX(node.x);
+-- MAGIC               node.y = transform.applyY(node.y);
+-- MAGIC 
+-- MAGIC               return node;
+-- MAGIC             }
+-- MAGIC           }
+-- MAGIC         }
+-- MAGIC 
+-- MAGIC         function dragstarted() {
+-- MAGIC           if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+-- MAGIC           d3.event.subject.fx = transform.invertX(d3.event.x);
+-- MAGIC           d3.event.subject.fy = transform.invertY(d3.event.y);
+-- MAGIC         }
+-- MAGIC 
+-- MAGIC         function dragged() {
+-- MAGIC           d3.event.subject.fx = transform.invertX(d3.event.x);
+-- MAGIC           d3.event.subject.fy = transform.invertY(d3.event.y);
+-- MAGIC         }
+-- MAGIC 
+-- MAGIC         function dragended() {
+-- MAGIC           if (!d3.event.active) simulation.alphaTarget(0);
+-- MAGIC           d3.event.subject.fx = null;
+-- MAGIC           d3.event.subject.fy = null;
+-- MAGIC         }
+-- MAGIC 
+-- MAGIC         simulation.nodes(tempData.nodes).on("tick", simulationUpdate);
+-- MAGIC 
+-- MAGIC         simulation.force("link").links(tempData.links);
+-- MAGIC 
+-- MAGIC         function render() {}
+-- MAGIC 
+-- MAGIC         function simulationUpdate() {
+-- MAGIC           context.save();
+-- MAGIC 
+-- MAGIC           context.clearRect(0, 0, width, height);
+-- MAGIC           context.translate(transform.x, transform.y);
+-- MAGIC           context.scale(transform.k, transform.k);
+-- MAGIC 
+-- MAGIC           // Draw the links
+-- MAGIC           tempData.links.forEach(function(d) {
+-- MAGIC             context.beginPath();
+-- MAGIC             context.lineWidth = Math.min(d.weight, 40);
+-- MAGIC             context.strokeStyle = "rgba(0, 158, 227, .3)";
+-- MAGIC             context.moveTo(d.source.x, d.source.y);
+-- MAGIC             context.lineTo(d.target.x, d.target.y);
+-- MAGIC             context.stroke();
+-- MAGIC           });
+-- MAGIC 
+-- MAGIC           // Draw the nodes
+-- MAGIC           tempData.nodes.forEach(function(d, i) {
+-- MAGIC             context.beginPath();
+-- MAGIC             context.arc(d.x, d.y, Math.min(30, d.size), 0, 2 * Math.PI, true);
+-- MAGIC             context.fillStyle = "rgba(0, 158, 227, 0.8)";
+-- MAGIC             context.fill();
+-- MAGIC             context.fillStyle = "rgba(0, 0, 0, 1)";
+-- MAGIC             context.fillText(d.id, d.x + 10, d.y);
+-- MAGIC           });
+-- MAGIC 
+-- MAGIC           context.restore();
+-- MAGIC           
+-- MAGIC         }
+-- MAGIC       }
+-- MAGIC       
+-- MAGIC     function download(type) {
+-- MAGIC         var canvas = document.querySelector("canvas");
+-- MAGIC 
+-- MAGIC         var imgUrl;
+-- MAGIC         
+-- MAGIC         if (type === "png") 
+-- MAGIC           imgUrl = canvas.toDataURL("image/png");
+-- MAGIC         else if (type === "jpg") 
+-- MAGIC           imgUrl = canvas.toDataURL("image/png");
+-- MAGIC 
+-- MAGIC         window.open().document.write('<img src="' + imgUrl + '" />');
+-- MAGIC       }
+-- MAGIC     </script>
+-- MAGIC     
+-- MAGIC   </body>
+-- MAGIC </html>
+-- MAGIC """ % (nodes, edges)
+-- MAGIC 
+-- MAGIC #print(html)
+-- MAGIC displayHTML(html)
+
+-- COMMAND ----------
+
+-- MAGIC %md
+-- MAGIC **NOTE**: Using a canvas element hast two advantages:<br><br>
+-- MAGIC 
+-- MAGIC 1. It is more performant than SVG and will allow you to visualize more nodes and edges before your browser freezes the simulation
+-- MAGIC 2. You can export to JPG or PNG easily. Use the two buttons to open the canvas as images. Note that you need to right-click -> "Open in new tab" or copy the image in order to save it to disk.

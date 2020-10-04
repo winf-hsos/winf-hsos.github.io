@@ -2,11 +2,11 @@
 
 ## Applied Analytics
 
-- [#01 - Willkommen](ws_20_21/applied_analytics/01_willkommen.html)
+- [#01 - Willkommen](applied_analytics/01_willkommen.html)
 
 ## Information Management
 
-- [#01 - Welcome](ws_20_21/information_management/01_welcome.html)
+- [#01 - Welcome](information_management/01_welcome.html)
 
 ## Web Engineering
 

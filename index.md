@@ -1,4 +1,4 @@
-# Databricks Notebool Templates
+# Databricks Notebook Templates
 
 ## Applied Analytics
 

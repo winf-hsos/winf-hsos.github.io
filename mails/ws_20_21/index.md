@@ -1,16 +1,14 @@
 # Mails
 
-## WS 20/21
-
-### Applied Analytics
+## Applied Analytics
 
 - [#01 - Willkommen](ws_20_21/applied_analytics/01_willkommen.html)
 
-### Information Management
+## Information Management
 
 - [#01 - Welcome](ws_20_21/information_management/01_welcome.html)
 
-### Web Engineering
+## Web Engineering
 
-### Empirisches Arbeiten
+## Empirisches Arbeiten
 

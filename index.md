@@ -9,8 +9,8 @@
 
 ### WS 20/21
 
-- [What is SQL and what can it do? (including Chicago Sex Offenders Data) (Source)](databricks-notebooks/applied-analytics/WS2021/What is SQL and what can it do.sql)
-- [What is SQL and what can it do? (including Chicago Sex Offenders Data) (HTML)](databricks-notebooks/applied-analytics/WS2021/What is SQL and what can it do.html)
+- [What is SQL and what can it do? (including Chicago Sex Offenders Data) (Source)](databricks-notebooks/applied-analytics/ws2021/What is SQL and what can it do.sql)
+- [What is SQL and what can it do? (including Chicago Sex Offenders Data) (HTML)](databricks-notebooks/applied-analytics/ws2021/what_is_sql_and_what_can_it_do.html)
 
 ## Big Data Analytics
 

@@ -2,7 +2,6 @@
 
 ## Applied Analytics
 
-
 - [#01 - Willkommen](applied_analytics/01_willkommen.html)
 - [#02 - Briefing Woche 1](applied_analytics/02_briefing_woche_01.html)
 - [#03 - Agenda Woche 1](applied_analytics/03_agenda_woche_01.html)

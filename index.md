@@ -4,8 +4,13 @@
 
 - [Fallstudie Teil 1 - Verkaufsanalysen (HTML)](databricks-notebooks/applied-analytics/Template - Campusbier Verkäufe.html)
 - [Fallstudie Teil 1 - Verkaufsanalysen (Source)](databricks-notebooks/applied-analytics/Template - Campusbier Verkäufe.sql)
-- [Template - Campusbier 1.0 - Vorbefragung(HTML)](databricks-notebooks/applied-analytics/Template - Campusbier 1.0 - Vorbefragung.html)
-- [Template - Campusbier 1.0 - Vorbefragung(Source)](databricks-notebooks/applied-analytics/Template - Campusbier 1.0 - Vorbefragung.sql)
+- [Template - Campusbier 1.0 - Vorbefragung (HTML)](databricks-notebooks/applied-analytics/Template - Campusbier 1.0 - Vorbefragung.html)
+- [Template - Campusbier 1.0 - Vorbefragung (Source)](databricks-notebooks/applied-analytics/Template - Campusbier 1.0 - Vorbefragung.sql)
+
+### WS 20/21
+
+- [What is SQL and what can it do? (including Chicago Sex Offenders Data) (Source)](databricks-notebooks/applied-analytics/WS2021/What is SQL and what can it do.sql)
+- [What is SQL and what can it do? (including Chicago Sex Offenders Data) (HTML)](databricks-notebooks/applied-analytics/WS2021/What is SQL and what can it do.html)
 
 ## Big Data Analytics
 

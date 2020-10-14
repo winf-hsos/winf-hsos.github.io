@@ -9,7 +9,7 @@
 
 ### WS 20/21
 
-- [What is SQL and what can it do? (including Chicago Sex Offenders Data) (Source)](databricks-notebooks/applied-analytics/ws2021/What is SQL and what can it do.sql)
+- [What is SQL and what can it do? (including Chicago Sex Offenders Data) (Source)](databricks-notebooks/applied-analytics/ws2021/what_is_sql_and_what_can_it_do.sql)
 - [What is SQL and what can it do? (including Chicago Sex Offenders Data) (HTML)](databricks-notebooks/applied-analytics/ws2021/what_is_sql_and_what_can_it_do.html)
 
 ## Big Data Analytics
@@ -57,8 +57,8 @@
 - [Visualizations with Python (PYTHON)](databricks-notebooks/big-data-analytics/ss-2020/Visualizations with Python.py)
 - [Clean-Up Databricks Files and Tables (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Clean-Up Databricks Files and Tables.html)
 - [Clean-Up Databricks Files and Tables (SCALA)](databricks-notebooks/big-data-analytics/ss-2020/Clean-Up Databricks Files and Tables.scala)
-- [Load Covid-19 Data from Our World in Data (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Load Covid-19 Data from Our World in Data.html)
-- [Load Covid-19 Data from Our World in Data (SQL)](databricks-notebooks/big-data-analytics/ss-2020/Load Covid-19 Data from Our World in Data.sql)
+- [Load Covid-19 Data from Our World in Data (HTML)](databricks-notebooks/big-data-analytics/ss-2020/load_covid19_data_from_our_world_in_data.html)
+- [Load Covid-19 Data from Our World in Data (SQL)](databricks-notebooks/big-data-analytics/ss-2020/load_covid19_data_from_our_world_in_data.sql)
 - [NLP with Python and spaCy - First Steps (HTML)](databricks-notebooks/big-data-analytics/ss-2020/NLP with Python and spaCy - First Steps.html)
 - [NLP with Python and spaCy - First Steps (PYTHON)](databricks-notebooks/big-data-analytics/ss-2020/NLP with Python and spaCy - First Steps.sql)
 - [Working with URLs (HTML)](databricks-notebooks/big-data-analytics/ss-2020/Working with URLs.html)

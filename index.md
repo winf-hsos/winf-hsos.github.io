@@ -83,6 +83,11 @@
 - [2 - Machine Learning - Beispiele](databricks-notebooks/empirisches-arbeiten/2 - Machine Learning - Beispiele.html)
 - [3 - Text Analytics](databricks-notebooks/empirisches-arbeiten/3 - Text Analytics.html)
 
+### WS 20/21
+
+- Template für das Laden eurer Tweets ([HTML](databricks-notebooks/empirisches-arbeiten/ws2021/template_für_das_laden_eurer_tweets.html) | [SQL](databricks-notebooks/empirisches-arbeiten/ws2021/template_für_das_laden_eurer_tweets.sql))
+- Erste Schritte mit SQL am Beispiel von Tweets ([HTML](databricks-notebooks/empirisches-arbeiten/ws2021/template_für_erste_schritte_mit_sql_am_beispiel_von_tweets.html) | [SQL](databricks-notebooks/empirisches-arbeiten/ws2021/template_für_erste_schritte_mit_sql_am_beispiel_von_tweets.sql))
+
 ## Information Management
 
 ### Notebook Templates

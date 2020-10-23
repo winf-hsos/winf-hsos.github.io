@@ -11,7 +11,7 @@
 
 - [What is SQL and what can it do? (including Chicago Sex Offenders Data) (Source)](databricks-notebooks/applied-analytics/winter2021/what_is_sql_and_what_can_it_do.sql)
 - [What is SQL and what can it do? (including Chicago Sex Offenders Data) (HTML)](databricks-notebooks/applied-analytics/winter2021/what_is_sql_and_what_can_it_do.html)
-- Template für Übung: Deskriptive Analysen mit SQL ([HTML](databricks-notebooks/applied_analytics/winter2021 deskriptive_analysen_mit_sql.html) &#124; [SQL](databricks-notebooks/applied_analytics/winter2021/deskriptive_analysen_mit_sql.sql))
+- Template für Übung: Deskriptive Analysen mit SQL ([HTML](databricks-notebooks/applied_analytics/winter2021/deskriptive_analysen_mit_sql.html) &#124; [SQL](databricks-notebooks/applied_analytics/winter2021/deskriptive_analysen_mit_sql.sql))
 
 
 ## Big Data Analytics

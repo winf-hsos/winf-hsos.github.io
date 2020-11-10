@@ -1,7 +1,7 @@
 
 Promise.all([
-    readSheetData("1Ve7ZlI5FrTtEBEYfixe98JOuwKWKc1dXd_vgM6d2BB8", 3),
-    readSheetData("1Ve7ZlI5FrTtEBEYfixe98JOuwKWKc1dXd_vgM6d2BB8", 2)]).then(start);
+    readSheetData("1Ve7ZlI5FrTtEBEYfixe98JOuwKWKc1dXd_vgM6d2BB8", 2),
+    readSheetData("1Ve7ZlI5FrTtEBEYfixe98JOuwKWKc1dXd_vgM6d2BB8", 1)]).then(start);
 
 var projects, participants;
 

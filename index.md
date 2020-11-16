@@ -96,7 +96,7 @@
 - [Databricks Notebook - Template - Crimes in Chicago 2018](databricks-notebooks/information-management/Template - Crimes in Chicago 2018.html)
 - [Databricks Notebook - Template - Wine Reviews](databricks-notebooks/information-management/Template - Wine Reviews.html)
 - [Databricks Notebook - Template - Craft Beer](databricks-notebooks/information-management/Template - Craft Beer.html)
-- [Databricks Notebook - Template - Simpsons](databricks-notebooks/information-management/Template - Simpsons.html)
+- [Databricks Notebook - Template - Simpsons](databricks-notebooks/information-management/template_simpsons.html)
 - [Databricks Notebook - Template - Beer Sales 1.0 (HTML)](databricks-notebooks/information-management/Template - Beer Sales 1.0.html)
 - [Databricks Notebook - Template - Beer Sales 1.0 (Source)](databricks-notebooks/information-management/Template - Beer Sales 1.0.sql)
 

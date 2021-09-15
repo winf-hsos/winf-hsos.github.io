@@ -2,8 +2,7 @@
 
 # SQL
 
-- [Arrays with SQL (HTML)](databricks-notebooks/sql/arrays_with_sql.html)
-
+- [Zur Übersicht der SQL-Notebooks](databricks-notebooks/sql/)
 
 
 ## Applied Analytics

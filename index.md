@@ -1,5 +1,11 @@
 # Databricks Notebook Templates
 
+# SQL
+
+- [Arrays with SQL (HTML)](databricks-notebooks/sql/arrays_with_sql.html)
+
+
+
 ## Applied Analytics
 
 - [Fallstudie Teil 1 - Verkaufsanalysen (HTML)](databricks-notebooks/applied-analytics/Template - Campusbier Verkäufe.html)
